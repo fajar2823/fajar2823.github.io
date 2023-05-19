@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+	<!-- MY CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,300&display=swap" rel="stylesheet">
+	<!--Feather icons -->
+	<script src="https://unpkg.com/feather-icons"></script>
+
+</head>
+<body>
+
+<!-- Navbar Start -->
+<nav class="navbar">
+	<a href="#" class="navbar-logo"><img src="img/logo/logoditonpremium.png"></a>
+
+	<div class="navbar-nav">
+		<a href="#solid">Solid</a>
+		<a href="#metallic">Metallic</a>
+		<a href="#candytone">Candytone</a>
+		<a href="#clear">Clear</a>
+
+	</div>
+
+
+	<div class="navbar-extra">
+		<a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+	</div>
+</nav>
+<!-- Navbar End -->
+
+<!-- Main Content Start-->
+
+<main class="content">
+	<div class="preview">
+		<img class="imgPreview" src="img/Color Chat Motor/Metallic Color/Color Chart_Metallic_Black.jpg" alt="" >
+		<div class="preview-btn">
+			<button class="btn" onclick="previous()">Prev</button>
+			<div ><p class="colors-name">9239 <br> BLACK METALLIC</p></div>
+			<button class="btn" onclick="next()">Next</button>
+		</div>
+	</div>
+	<div class="category" id="metallic">
+		<div class="title">
+			<img src="img/title/title-2.png">
+			<div class="colors">
+				<div class="colors-items">
+				<ul>
+					<img src="img/METALIC COLORS/BLACK METALLIC.png">
+					<li>9239</li>
+					<li>BLACK METALLIC</li>
+					<li>  warna dasar 9109 BLACK</li>
+				</ul>
+				</div>
+				<div class="colors-items">
+				<ul>
+					<img src="img/METALIC COLORS/SILVER GREY MET.jpg">
+					<li>9178</li>
+					<li>SILVER GREY MET</li>
+					<li>  warna dasar 9109 BLACK</li>
+				</ul>
+				</div>
+				<div class="colors-items">
+				<ul>
+					<img src="img/METALIC COLORS/MAYFAIR GREEN.jpg">
+					<li>9544</li>
+					<li>MAYFAIR GREEN</li>
+					<li>  warna dasar 9109 BLACK</li>
+				</ul>
+				</div>
+				<div class="colors-items">
+				<ul>
+					<img src="img/METALIC COLORS/SILVER METALLIC.jpg">
+					<li>9180</li>
+					<li>SILVER METALLIC</li>
+					<li>  warna dasar 9109 BLACK</li>
+				</ul>
+				</div>
+				<div class="colors-items">
+				<ul>
+					<img src="img/METALIC COLORS/YELLOW METALLIC.jpg">
+					<li>9239</li>
+					<li>YELLOW METALLIC</li>
+					<li>  warna dasar 9109 BLACK</li>
+				</ul>
+				</div>
+				<div class="colors-items">
+				<ul>
+					<img src="img/METALIC COLORS/MAGENTA BLUE.jpg">
+					<li>9215</li>
+					<li>MAGENTA BLUE</li>
+					<li>  warna dasar 9109 BLACK</li>
+				</ul>
+				</div>
+			</div>
+	</div>
+	<div class="btn-group">
+		<div class="play">	
+			<i class="fa-solid fa-circle-play fa-2xl"></i>
+		</div>
+		<hr>
+		<div class="back">
+			<i class=""><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back-up" width="50" height="50" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" onclick="history.back()">
+	   		<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+	   		<path d="M9 14l-4 -4l4 -4"></path>
+	  		 <path d="M5 10h11a4 4 0 1 1 0 8h-1"></path>
+			</svg>
+			</i>
+		</div>
+	</div>
+	<div class="clip">
+		<iframe id="iframe" src="https://www.youtube.com/embed/eJ2aKK3Q458?enablejsapi=1&version=3&playerapiid=ytplayer" allow="autoplay" frameborder="0" allowscriptaccess="always" allowfullscreen></iframe>
+	</div>
+	<!-- modal clip start -->
+	<div id="myModal" class="modal">
+		
+	</div>
+	<!-- modal clip end -->
+</main>
+
+<!-- Main Content End-->
+
+
+	
+
+<!-- Feather Icons -->
+<script>
+      feather.replace()
+</script>
+<script>
+let imgPreview =  document.querySelector('.imgPreview');
+let colorsName = document.querySelector('.colors-name');
+let videoLink = document.querySelector('iframe');
+let images = [
+	'img/Color Chat Motor/Metallic Color/Color Chart_Metallic_Black.jpg',
+	'img/Color Chat Motor/Metallic Color/Color Chart_Metallic_Silver Grey.jpg',
+	'img/Color Chat Motor/Metallic Color/Color Chart_Metallic_Mayfair Green.jpg',
+	'img/Color Chat Motor/Metallic Color/Color Chart_Metallic_Silver Metallic.jpg',
+	'img/Color Chat Motor/Metallic Color/Color Chart_Metallic_Yellow Metallic.jpg',
+	'img/Color Chat Motor/Metallic Color/Color Chart_Metallic_Magenta Blue.jpg'
+];
+let color = ['9239<br> BLACK METALLIC','9178<br> SILVER GREY MET','9544<br> MAYFAIR GREEN','9180<br> SILVER METALLIC','9239<br> YELLOW METALLIC','9215<br> MAGENTA BLUE'];
+let videos = ['eJ2aKK3Q458','5fggmXn_Wz8','lZqyBfQ5NncI','7AhVQi2L2MM','lyMb8apX5bU','UCYCOSuXNgM'];
+
+let i = 0;
+function next() {
+if (i >= images.length - 1) {
+    return false;
+    }
+    i++;
+    imgPreview.setAttribute('src', images[i]);
+    colorsName.innerHTML =color[i];
+    videoLink.setAttribute('src','https://www.youtube.com/embed/'+videos[i]+'?enablejsapi=1&version=3&playerapiid=ytplayer');
+    }
+function previous() {
+	if (i <= 0) {
+	return false;
+    }
+    i--;
+    imgPreview.setAttribute('src', images[i]);
+    colorsName.innerHTML= color[i];
+    videoLink.setAttribute('src','https://www.youtube.com/embed/'+videos[i]+'?enablejsapi=1&version=3&playerapiid=ytplayer');
+    }
+</script>
+	<!-- MY Script -->
+<script defer src="js/script.js"></script>
+
+</body>
+</html>

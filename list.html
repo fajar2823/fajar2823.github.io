@@ -46,7 +46,7 @@
 		<img class="imgPreview" src="img/Color Chat Motor/Solid Color/Color Chart_Solid Color_Black.jpg" alt="" >
 		<div class="preview-btn">
 			<button class="btn" onclick="previous()">Prev</button>
-			<div class="colors-name">9109 BLACK</div>
+			<div ><p class="colors-name">9109 <br> BLACK</p></div>
 			<button class="btn" onclick="next()">Next</button>
 		</div>
 	</div>
@@ -116,7 +116,7 @@
 					<img src="img/SOLID COLORS/BOXER BLUE.jpg">
 					<li>9422</li>
 					<li>BOXER BLUE</li>
-					<li> <hr> warna dasar 9102 WHITE</li>
+					<li>  warna dasar 9102 WHITE</li>
 				</ul>
 				</div>
 				<div class="colors-items">
@@ -124,7 +124,7 @@
 					<img src="img/SOLID COLORS/CHILLI RED.jpg">
 					<li>9462</li>
 					<li>CHILLI RED</li>
-					<li> <hr> warna dasar 9102 WHITE</li>
+					<li>  warna dasar 9102 WHITE</li>
 				</ul>
 				</div>
 				<div class="colors-items">
@@ -132,7 +132,7 @@
 					<img src="img/SOLID COLORS/PETRONAS GREEN.jpg">
 					<li>9238</li>
 					<li>PETRONAS GREEN</li>
-					<li> <hr> warna dasar 9102 WHITE</li>
+					<li>  warna dasar 9102 WHITE</li>
 				</ul>
 				</div>
 				<div class="colors-items">
@@ -140,7 +140,7 @@
 					<img src="img/SOLID COLORS/PREMIUM MAROON.jpg">
 					<li>9254</li>
 					<li>PREMIUM MAROON</li>
-					<li> <hr> warna dasar 9102 WHITE</li>
+					<li>  warna dasar 9102 WHITE</li>
 				</ul>
 				</div>
 				<div class="colors-items">
@@ -148,7 +148,7 @@
 					<img src="img/SOLID COLORS/MAGENTA PINK.jpg">
 					<li>9433</li>
 					<li>MAGENTA PINK</li>
-					<li> <hr> warna dasar 9102 WHITE</li>
+					<li>  warna dasar 9102 WHITE</li>
 				</ul>
 				</div>
 				<div class="colors-items">
@@ -156,7 +156,7 @@
 					<img src="img/SOLID COLORS/DARK GREEN.jpg">
 					<li>9432</li>
 					<li>DARK GREEN</li>
-					<li> <hr> warna dasar 9102 WHITE</li>
+					<li>  warna dasar 9102 WHITE</li>
 				</ul>
 				</div>
 				<div class="colors-items">
@@ -164,7 +164,7 @@
 					<img src="img/SOLID COLORS/TIGER YELLOW.jpg">
 					<li>9425</li>
 					<li>TIGER YELLOW</li>
-					<li> <hr> warna dasar 9102 WHITE</li>
+					<li>  warna dasar 9102 WHITE</li>
 				</ul>
 				</div>
 				<div class="colors-items">
@@ -172,7 +172,7 @@
 					<img src="img/SOLID COLORS/MASTER YELLOW.jpg">
 					<li>9431</li>
 					<li>MASTER YELLOW</li>
-					<li> <hr> warna dasar 9102 WHITE</li>
+					<li>  warna dasar 9102 WHITE</li>
 				</ul>
 				</div>
 				<div class="colors-items">
@@ -180,7 +180,7 @@
 					<img src="img/SOLID COLORS/FORTUNE BLUE.jpg">
 					<li>9421</li>
 					<li>FORTUNE BLUE</li>
-					<li> <hr> warna dasar 9102 WHITE</li>
+					<li>  warna dasar 9102 WHITE</li>
 				</ul>
 				</div>
 				<div class="colors-items">
@@ -198,7 +198,7 @@
 		</div>
 		<hr>
 		<div class="back">
-			<i class=""><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back-up" width="50" height="50" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+			<i class=""><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back-up" width="50" height="50" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" onclick="history.back()">
 	   		<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
 	   		<path d="M9 14l-4 -4l4 -4"></path>
 	  		 <path d="M5 10h11a4 4 0 1 1 0 8h-1"></path>
@@ -206,6 +206,14 @@
 			</i>
 		</div>
 	</div>
+	<div class="clip">
+		<iframe id="iframe" src="https://www.youtube.com/embed/oiKrvchVs-I?enablejsapi=1&version=3&playerapiid=ytplayer" allow="autoplay" frameborder="0" allowscriptaccess="always" allowfullscreen></iframe>
+	</div>
+	<!-- modal clip start -->
+	<div id="myModal" class="modal">
+		
+	</div>
+	<!-- modal clip end -->
 </main>
 
 <!-- Main Content End-->
@@ -219,7 +227,8 @@
 </script>
 <script>
 let imgPreview =  document.querySelector('.imgPreview');
-let colorsName = document.querySelector('.colors-name')
+let colorsName = document.querySelector('.colors-name');
+let videoLink = document.querySelector('iframe');
 let images = [
 	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_Black.jpg',
 	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_Semi Doff.jpg',
@@ -241,8 +250,9 @@ let images = [
 	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_ Army Green.jpg'
 
 ];
-let color = ['9109 BLACK','9183 BLACK SEMI DOFF','9184 BLACK DOFF','9102 WHITE','9103 SUPER WHITE','9124 SILVER','9123 GOLD','9112 POLICE GREY','9422 BOXER BLUE','9462 CHILLI RED','9238 PETRONAS GREEN', '9254 PREMIUM MAROON','9433 MAGENTA PINK','9432 DARK GREEN','9425 TIGER YELLOW', '9431MASTER YELLOW','9421 FORTUNE BLUE','9303 ARMY GREEN'
-	]
+let color = ['9109<br> BLACK','9183<br> BLACK SEMI DOFF','9184<br> BLACK DOFF','9102<br> WHITE','9103<br> SUPER WHITE','9124<br> SILVER','9123<br> GOLD','9112<br> POLICE GREY','9422<br> BOXER BLUE','9462<br> CHILLI RED','9238<br> PETRONAS GREEN', '9254<br> PREMIUM MAROON','9433<br> MAGENTA PINK','9432<br> DARK GREEN','9425<br> TIGER YELLOW', '9431<br>MASTER YELLOW','9421<br> FORTUNE BLUE','9303<br> ARMY GREEN'
+	];
+let videos = ['oiKrvchVs-I','JTlV2Gns1Fo','l_0Ru3iie1k','JA91WfNU2aY','kZ88fAwDqtw','HmCwWdxK2oA','SAAgsLv7zyc','wKtkuzpSkgY','AFamnjT7wmM','9tRr8HM_af0','0W_lBsf4C3Q','YoqrEXCFU5I','_Z12_GXAg8E','V6d7Tb6we04','Dj5BQNiz5sM','FGJkt_uf0SM','msbFOFeGsY4','fxvL1JAu4dw'];
 
 let i = 0;
 function next() {
@@ -252,6 +262,7 @@ if (i >= images.length - 1) {
     i++;
     imgPreview.setAttribute('src', images[i]);
     colorsName.innerHTML =color[i];
+    videoLink.setAttribute('src','https://www.youtube.com/embed/'+videos[i]+'?enablejsapi=1&version=3&playerapiid=ytplayer');
     }
 function previous() {
 	if (i <= 0) {
@@ -260,6 +271,7 @@ function previous() {
     i--;
     imgPreview.setAttribute('src', images[i]);
     colorsName.innerHTML= color[i];
+    videoLink.setAttribute('src','https://www.youtube.com/embed/'+videos[i]+'?enablejsapi=1&version=3&playerapiid=ytplayer');
     }
 </script>
 	<!-- MY Script -->

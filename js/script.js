@@ -16,43 +16,21 @@ document.addEventListener('click', function (e) {
 	}
 });
 
-// preview image next prev btn
-let imgPreview =  document.querySelector('.imgPreview');
-let images = [
-	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_Black.jpg',
-	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_Semi Doff.jpg',
-	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_Black Doff.jpg',
-	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_White.jpg',
-	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_Super White.jpg',
-	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_Silver.jpg',
-	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_Gold.jpg',
-	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_Police Grey.jpg',
-	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_Boxer Blue.jpg',
-	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_Chilli Red.jpg',
-	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_Petronas Green.jpg',
-	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_Premium Maroon.jpg',
-	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_Magenta Pink.jpg',
-	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_Dark Green.jpg',
-	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_Tiger Yellow.jpg',
-	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_Master Yellow.jpg',
-	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_Fortune Blue.jpg',
-	'img/Color Chat Motor/Solid Color/Color Chart_Solid Color_Army Green.jpg'
+// clip
+let	btnPlay = document.querySelector('.play');
+let clip = document.querySelector('.clip');
+let iframe = document.querySelector('iframe');
+btnPlay.onclick= function(){
+	btnPlay.classList.add('active');
+	clip.classList.add('active');
+	iframe.contentWindow.postMessage( '{"event":"command", "func":"playVideo", "args":""}', '*');
+}
 
-];
+document.addEventListener('click', function (e) {
+	if (!btnPlay.contains(e.target) ) {
+		clip.classList.remove('active');
+		iframe.contentWindow.postMessage( '{"event":"command", "func":"stopVideo", "args":""}', '*');
 
-// let i = 0;
-// function next() {
-// if (i >= images.length - 1) {
-//     return false;
-//     }
-//     i++;
-//     imgPreview.setAttribute('src', images[i]);
-//     }
-// function previous() {
-// 	if (i <= 0) {
-// 	return false;
-//     }
-//     i--;
-//     imgPreview.setAttribute('src', images[i]);
-//     }
-// btnPrev.addEventListener('click',previous);
+
+	}
+});

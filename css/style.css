@@ -121,6 +121,10 @@ body{
 	display: flex;
 	flex-direction: row;
 }
+.container-category1{
+	display: flex;
+	flex-direction: row;
+}
 .container-category #kawasaki{
 	width: 50%;
 }
@@ -145,7 +149,7 @@ body{
 .putih{
 	background-color: #EDEDED;
 }
-.colors-items{;
+.colors-items{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -164,13 +168,14 @@ body{
 	width: 150px ; 
 	height: 150px;
 }
-.colors-items  ul{
+.colors-items  ul{;
 	color: #000;
 	list-style-type: none;
   	display: flex;
   	flex-flow: column wrap;
   	justify-content: flex-start;
   	align-items: center;
+  	
 }
 .colors-items li{
 	display: flex;
@@ -506,7 +511,7 @@ div.social {
 .btn-group .back{
 	display: none;
 }
-	
+.btn-group a:link    {color:#000;}
 }
 /*Mobile Phone*/
 @media(max-width:450px){

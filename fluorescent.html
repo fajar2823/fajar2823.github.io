@@ -22,9 +22,9 @@
 
 <!-- Navbar Start -->
 <nav class="navbar">
-	<a href="#" class="navbar-logo"><img src="img/logo/logoditonpremium.png"></a>
+	<a href="https://www.ditonpremium.com" class="navbar-logo" target="_blank"><img src="img/logo/logoditonpremium.png"></a>
 
-	<div class="navbar-nav">
+	<!-- <div class="navbar-nav">
 		<a href="#solid">Solid</a>
 		<a href="#metallic">Metallic</a>
 		<a href="#candytone">Candytone</a>
@@ -35,7 +35,7 @@
 
 	<div class="navbar-extra">
 		<a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
-	</div>
+	</div> -->
 </nav>
 <!-- Navbar End -->
 
@@ -105,14 +105,16 @@
 			<i class="fa-solid fa-circle-play fa-2xl"></i>
 		</div>
 		<hr>
+		<a href="index.html#fluorescent">
 		<div class="back">
-			<i class=""><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back-up" width="50" height="50" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" onclick="history.back()">
+			<i class=""><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back-up" width="50" height="50" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" >
 	   		<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
 	   		<path d="M9 14l-4 -4l4 -4"></path>
 	  		 <path d="M5 10h11a4 4 0 1 1 0 8h-1"></path>
 			</svg>
 			</i>
 		</div>
+		</a>
 	</div>
 	<div class="clip">
 		<iframe id="iframe" src="https://www.youtube.com/embed/BsEDv6ZXMs?enablejsapi=1&version=3&playerapiid=ytplayer" allow="autoplay" frameborder="0" allowscriptaccess="always" allowfullscreen></iframe>
@@ -126,7 +128,68 @@
 
 <!-- Main Content End-->
 
+<!-- Footer Start -->
+<footer>
+	<div class="row primary">
+	  <div class="column about">
 
+	  <h3>DITON PREMIUM</h3>
+
+	   <p>
+	      Unduh Aplikasi Diton Premium Pilih warna yang tepat untuk motor Anda. Diton Premium kini hadir di Play Store.
+	  </p>
+
+	  <div class="social">
+	    <img src="img/logo/Playstor.png" alt="">
+	  </div>
+	</div>
+
+	<div class="column links">
+	<h3>QUICK LINKS</h3>
+
+	 <ul>
+
+	  <li>
+	   <a href="https://www.ditonpremium.com/about-us">About us</a>
+	  </li>
+	  <li>
+	   <a href="https://www.ditonpremium.com/dealers">Location</a>
+	  </li>
+	  <li>
+	   <a href="https://www.ditonpremium.com">Web Diton Premium</a>
+	  </li>
+	  <li>
+	   <a href="https://www.ditonpremium.com/contact-us">Contact us</a>
+	  </li>
+	 </ul>
+
+	</div>
+
+	<div class="column subscribe">
+	 <h3>Newsletter</h3>
+	  <div>
+	   <input type="email" placeholder="Your email id here" />
+	   <button>Subscribe</button>
+	  </div>
+
+	</div>
+
+	<div class="column ">
+		<h3>SOCIAL MEDIA</h3>
+		<ul class="sosial">
+			<a href="https://www.facebook.com/ditonpremiumofficial"><i data-feather="facebook"></i></a>
+			<a href="https://www.instagram.com/ditonpremium"><i data-feather="instagram"></i></a>
+			<a href="https://www.youtube.com/c/DitonPremium"><i data-feather="youtube"></i></a>
+		</ul>
+	</div>
+
+	</div>
+
+	<div class="row copyright">
+	   <p>Copyright &copy; 2021 Foolish Developer</p>
+	</div>
+</footer>
+<!-- Footer End -->
 	
 
 <!-- Feather Icons -->
@@ -168,6 +231,24 @@ function previous() {
     colorsName.innerHTML= color[i];
     videoLink.setAttribute('src','https://www.youtube.com/embed/'+videos[i]+'?enablejsapi=1&version=3&playerapiid=ytplayer');
     }
+    // clip
+let	btnPlay = document.querySelector('.play');
+let clip = document.querySelector('.clip');
+let iframe = document.querySelector('iframe');
+btnPlay.onclick= function(){
+	btnPlay.classList.add('active');
+	clip.classList.add('active');
+	iframe.contentWindow.postMessage( '{"event":"command", "func":"playVideo", "args":""}', '*');
+}
+
+document.addEventListener('click', function (e) {
+	if (!btnPlay.contains(e.target) ) {
+		clip.classList.remove('active');
+		iframe.contentWindow.postMessage( '{"event":"command", "func":"stopVideo", "args":""}', '*');
+
+
+	}
+});
 </script>
 	<!-- MY Script -->
 <script defer src="js/script.js"></script>

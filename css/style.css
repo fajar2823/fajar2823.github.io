@@ -17,6 +17,8 @@ body{
 	font-family: 'Poppins', sans-serif;
 	background-color: var(--bg);
 	color: var(--primary);
+	width: 100%;
+	overflow-x: hidden;
 }
 .feather {
   width: 32px;
@@ -138,12 +140,16 @@ body{
 	object-fit: cover;
 	width: 100%;
 }
+#hi-temp .title img{
+
+}
 .colors{
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: flex-start;
+
 	
 }
 .putih{
@@ -241,6 +247,8 @@ li #warning::before{
 	margin-top: 10rem;
 }
 .preview{
+	width: 100%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -267,7 +275,7 @@ li #warning::before{
 	margin: 1rem 0;
 }
 .preview-btn .colors-name{
-	width: 280px;
+	width: 300px;
 	height: auto;
 	border-radius: 50px;
 	background: linear-gradient(309.21deg, #FCC319 78.59%, #FCB119 136.22%);
@@ -284,7 +292,7 @@ li #warning::before{
 }
 
 .imgPreview{
-	width: 75%;
+	width: 66%;
 }
 /*button group*/
 .btn-group{
@@ -484,18 +492,23 @@ div.social {
 
 }
 /*Tablet*/
-@media(max-width:768px){
+@media(min-width: 768px) and (max-width: 1024px){
 	html{
-		font-size: 62.5%;
+/*		font-size: 62.5%;*/
 	}
 	.katalog{
 		padding: 0 2rem;
 	}
 	.imgPreview{
 	width: 100%;
-}
+	}
+	.colors-items  img{
+	width: 90px ; 
+	height: 90px;
+	}
 .colors{
 	align-items: center;
+	justify-content: space-around;
 }
 .btn-group{
 	bottom: 65%;
@@ -506,49 +519,69 @@ div.social {
 .btn-group .play{
 	top: 28%;
 	right: 23%;
-	font-size: 1.5rem;
+/*	font-size: 1.5rem;*/
 }
 .btn-group .back{
 	display: none;
 }
+.clip{
+	width: 85%;
+	height: 45%;
+}
+.clip.active{
+	top:37%;
+}
 .btn-group a:link    {color:#000;}
+.row.primary {
+    grid-template-columns: 2fr 1fr;
+  }
 }
 /*Mobile Phone*/
-@media(max-width:450px){
+@media(min-width:320px) and (max-width:767px){
 	html{
-		font-size: 55%;
+/*		font-size: 55%;*/
 	}
+	/*body{
+		width: 650px;
+	}*/
 	.katalog{
 		padding: 0 2rem;
 		margin-top: 15rem;
 	}
 	.colors-items img{
-		width: 90px;
-		height: 90px;
+		width: 80px;
+		height: 80px;
 	}
 	.imgPreview{
 	width: 100%;
+/*	padding-top:3rem ;*/
 }
 .colors{
 	align-content: center;
+	justify-content: space-around;
 }
 .btn-group{
 	bottom: 65%;
   	right: 6%;
-	width: 46px;
-	height: 46px;
+	width: 56px;
+	height: 56px;
 }
 .btn-group .play{
 	top: 28%;
 	right: 23%;
-	font-size: 1.4rem;
+/*	font-size: 1.4rem;*/
 }
 .btn-group .back{
 	display: none;
 }
-.title img{
-	object-fit: cover;
-	width: 100%;
-	height: ;
+.clip{
+	width: 80%;
+	height: 34%;
 }
+.clip.active{
+	top:33%;
+}
+.row.primary {
+    grid-template-columns: 1fr;
+  }
 }

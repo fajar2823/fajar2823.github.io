@@ -2,6 +2,9 @@
 	--primary:#fff;
 	--bg:#fff;
 }
+html{
+	overflow-x: hidden;
+}
 *{
 	
 	margin: 0;
@@ -12,6 +15,7 @@
 	text-decoration: none;
 	scroll-behavior: smooth;
 	scroll-padding-top: 140px;
+
 }
 body{
 	font-family: 'Poppins', sans-serif;
@@ -19,6 +23,12 @@ body{
 	color: var(--primary);
 	width: 100%;
 	overflow-x: hidden;
+}
+a:link{
+	color: black;
+}
+svg{
+	stroke: black;
 }
 .feather {
   width: 32px;
@@ -209,11 +219,7 @@ body{
 	font-size: 10px;
 	padding: 0.5rem 0;
 }
-.colors-items ul li:nth-child(5){
-	background-color: #000;
-	color: #fff;
-	padding: 0.3rem 0;
-}
+
 .colors-items li p{
 	color: #FBAC18 ;
 }
@@ -221,8 +227,49 @@ li #warning::before{
 	list-style-image: url('../img/icon/danger.png');
 }
 #warning{
-	padding: 1rem 2.7rem;
-	
+	padding: 1rem 2.7rem;	
+}
+.card{
+	flex: 1 1 ;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+/*	align-self: normal;*/
+	margin: 0.8rem 1.2rem;
+}
+.card  ul{;
+	color: #000;
+	list-style-type: none;
+  	display: flex;
+  	flex-flow: column wrap;
+  	justify-content: flex-start;
+  	align-items: center;
+  	
+}
+.card li{
+	display: flex;
+ 	flex-flow: column nowrap;
+	margin-bottom: 3px;
+	text-align: center;
+
+}
+.card  img{
+	width: 130px ; 
+	height: 130px;
+}
+.card ul li:nth-child(4){
+	list-style-image: url('../img/icon/Icon.png');
+	border-top: 0.2rem solid #000;
+	font-size: 10px;
+	padding: 0.5rem 0;
+}
+.card ul li:nth-child(5){
+	background-color: #000;
+	color: #fff;
+	padding: 0.3rem 0;
+	margin-top: auto;
+
 }
 .break{
 	flex-basis: 100%;
@@ -258,7 +305,8 @@ li #warning::before{
 	align-items: center;
 	margin: 1.3rem 0;
 }
-.preview .preview-btn{
+.preview-btn{
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	word-wrap: break-word;
@@ -277,6 +325,7 @@ li #warning::before{
 	font-size: 1.3rem;
 	padding: 21px 25px;
 	margin: 1rem 0;
+	font-weight: 600;
 }
 .preview-btn .colors-name{
 	width: 300px;
@@ -289,6 +338,7 @@ li #warning::before{
 	color: #000;
 	text-align-last: center;
 	line-height: 1.5;
+	font-weight: 600;
 }
 .preview-btn .colors-name p{
 	width: 100%;
@@ -510,6 +560,10 @@ div.social {
 	width: 90px ; 
 	height: 90px;
 	}
+.colors-items{
+	min-width: 150px;
+	max-width: 150px;
+}
 .colors{
 	align-items: center;
 	justify-content: space-around;
@@ -539,7 +593,11 @@ div.social {
 .row.primary {
     grid-template-columns: 2fr 1fr;
   }
-.container-category{
+  .container-category{
+ 	flex-direction: row;
+ }
+.container-category1{
+	display: flex;
 	flex-direction: column;
 }
 /*.category1{
@@ -548,7 +606,7 @@ div.social {
 }*/
 }
 /*Mobile Phone*/
-@media(min-width:320px) and (max-width:767px){
+@media(min-width:320px) and (max-width:480px){
 	html{
 /*		font-size: 55%;*/
 	}
@@ -563,6 +621,10 @@ div.social {
 	width: 100%;
 /*	padding-top:3rem ;*/
 }
+.colors-items{
+	min-width: 150px;
+	max-width: 150px;
+}
 .colors{
 	align-content: center;
 	justify-content: space-around;
@@ -570,16 +632,28 @@ div.social {
 .btn-group{
 	bottom: 65%;
   	right: 6%;
-	width: 56px;
-	height: 56px;
+	width: 66px;
+	height: 156px;
 }
 .btn-group .play{
-	top: 28%;
+	top: 18%;
 	right: 23%;
 /*	font-size: 1.4rem;*/
 }
-.btn-group .back{
+/*.btn-group .back{
 	display: none;
+}*/
+
+.preview-btn .btn{
+	width: calc(100% - 5%);
+	font-size: 80%;
+	font-weight: 600;
+}
+.preview-btn .colors-name{ 
+	width: 100%;
+	height: auto;
+	font-size: 80%;
+	font-weight: 600;
 }
 .clip{
 	width: 80%;
@@ -591,11 +665,17 @@ div.social {
 .row.primary {
     grid-template-columns: 1fr;
   }
-.container-category{
+ .container-category{
+ 	flex-direction: row;
+ }
+.container-category1{
+	display: flex;
 	flex-direction: column;
 }
 .category1{
-	flex-direction: column;
-	align-items: center;
+	flex-flow: row wrap;
+	align-items: baseline;
+
 }
+
 }

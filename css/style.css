@@ -166,9 +166,7 @@ svg{
 
 	
 }
-.putih{
-	background-color: #EDEDED;
-}
+
 .colors-items{
 	display: flex;
 	flex-direction: column;
@@ -176,8 +174,12 @@ svg{
 	min-width: 250px;
 	max-width: 250px;
 	word-wrap: break-word;
-	padding: 0.8rem 0.5rem;
+	margin: 0.6rem 0.4rem;
 
+
+}
+.putih{
+	background-color: #EDEDED;
 
 }
 .colors-items  img{
@@ -218,10 +220,15 @@ svg{
 	border-top: 0.2rem solid #000;
 	font-size: 10px;
 	padding: 0.5rem 0;
+	text-align: justify;
+	
 }
-
-.colors-items li p{
+.colors-items p{
+	text-align: center;
+}
+.colors-items p span{
 	color: #FBAC18 ;
+	white-space: wrap;
 }
 li #warning::before{
 	list-style-image: url('../img/icon/danger.png');
@@ -230,6 +237,8 @@ li #warning::before{
 	padding: 1rem 2.7rem;	
 }
 .card{
+	width: 100%;
+	height: 100%;
 	flex: 1 1 ;
 	display: flex;
 	flex-wrap: wrap;
@@ -550,9 +559,7 @@ div.social {
 	html{
 /*		font-size: 62.5%;*/
 	}
-	.katalog{
-		padding: 0 2rem;
-	}
+	
 	.imgPreview{
 	width: 100%;
 	}
@@ -560,9 +567,13 @@ div.social {
 	width: 90px ; 
 	height: 90px;
 	}
+	.card  img{
+	width: 90px ; 
+	height: 90px;
+	}
 .colors-items{
-	min-width: 150px;
-	max-width: 150px;
+	min-width: 350px;
+	max-width: 350px;
 }
 .colors{
 	align-items: center;
@@ -594,16 +605,23 @@ div.social {
     grid-template-columns: 2fr 1fr;
   }
   .container-category{
- 	flex-direction: row;
+ 	flex-direction: column;
  }
+ .container-category #kawasaki {
+    width: 100%;
+}
+.container-category #suzuki {
+    width: 100%;
+}
 .container-category1{
 	display: flex;
 	flex-direction: column;
 }
-/*.category1{
-	flex-direction: column;
-	align-items: center;
-}*/
+
+.category1{
+	flex-flow: row wrap;
+	align-items: baseline;
+}
 }
 /*Mobile Phone*/
 @media(min-width:320px) and (max-width:480px){
@@ -617,13 +635,20 @@ div.social {
 		width: 80px;
 		height: 80px;
 	}
+	.card img{
+		width: 80px;
+		height: 80px;
+	}
 	.imgPreview{
 	width: 100%;
 /*	padding-top:3rem ;*/
 }
 .colors-items{
 	min-width: 150px;
-	max-width: 150px;
+	max-width: 320px;
+}
+.colors-items .putih{
+	max-width: 260px;
 }
 .colors{
 	align-content: center;
@@ -632,20 +657,28 @@ div.social {
 .btn-group{
 	bottom: 65%;
   	right: 6%;
-	width: 66px;
-	height: 156px;
+	width: 44px;	
+	height: 106px;
 }
 .btn-group .play{
 	top: 18%;
-	right: 23%;
+	right: 13%;
 /*	font-size: 1.4rem;*/
 }
-/*.btn-group .back{
-	display: none;
-}*/
+.btn-group .back{
+	width: 89%;
+	top: 48%;
+	right: 12%;
+	padding-top: 0;
+}
+.back svg{
+	width: 45px;
+	height: 45px;
+
+}
 
 .preview-btn .btn{
-	width: calc(100% - 5%);
+	width: auto;
 	font-size: 80%;
 	font-weight: 600;
 }
@@ -666,16 +699,23 @@ div.social {
     grid-template-columns: 1fr;
   }
  .container-category{
- 	flex-direction: row;
+ 	flex-direction: column;
  }
 .container-category1{
 	display: flex;
 	flex-direction: column;
+	flex-wrap: nowrap;
+}
+.container-category #kawasaki {
+    width: 100%;
+}
+.container-category #suzuki {
+    width: 100%;
 }
 .category1{
 	flex-flow: row wrap;
 	align-items: baseline;
-
 }
+
 
 }

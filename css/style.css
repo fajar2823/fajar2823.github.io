@@ -624,7 +624,7 @@ div.social {
 }
 }
 /*Mobile Phone*/
-@media(min-width:320px) and (max-width:480px){
+@media(min-width:320px) and (max-width:480px) and (-webkit-min-device-pixel-ratio: 2.625){
 	html{
 /*		font-size: 55%;*/
 	}
